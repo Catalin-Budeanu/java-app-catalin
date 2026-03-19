@@ -36,7 +36,6 @@ jobs:
       - run: |
           echo "Smoke tests on staging"
           echo "OK"
-
   deploy_prod:
     if: github.ref == 'refs/heads/main'
     needs: verify-staging
