@@ -3,4 +3,10 @@ target/
 .vscode/
 *.iml
 .DS_Store
+*.jar
 
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
