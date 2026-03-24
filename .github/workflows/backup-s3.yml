@@ -16,4 +16,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
       - run: tar -czf project-${{ github.run_number }}.tar.gz .
-      - run: aws s3 cp project-${{ github.run_number }}.tar.gz s3://${{ secrets.BACKUP_BUCKET }}/
+      - run: tar --exclude=./project-*.tar.gz -czf project-${{ github.run_number }}.tar.gz .
